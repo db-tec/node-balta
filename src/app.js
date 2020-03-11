@@ -14,6 +14,8 @@ const router = express.Router();
 // Connecta ao banco
 mongoose.connect('mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=false');
 
+//Carrega os Models
+const Product = require('./models/product');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ 
